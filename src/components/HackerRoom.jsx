@@ -4,22 +4,17 @@ Command: npx gltfjsx@6.5.0 hacker-room-new.glb -T
 Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc-portfolio/public/models/hacker-room-new-transformed.glb [2.56MB] (93%)
 */
 
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 
 const HackerRoom = (props) => {
   const { nodes, materials } = useGLTF("/models/hacker-room.glb");
-
-  const monitortxt = useTexture("textures/desk/monitor.png");
-  const screenTxt = useTexture("textures/desk/screen.png");
 
   return (
     <group {...props} dispose={null}>
       <mesh
         geometry={nodes.screen_screens_0.geometry}
         material={materials.screens}
-      >
-        <meshMatcapMaterial map={screenTxt} />
-      </mesh>
+      />
       <mesh
         geometry={nodes.screen_glass_glass_0.geometry}
         material={materials.glass}
@@ -31,9 +26,7 @@ const HackerRoom = (props) => {
       <mesh
         geometry={nodes.table_table_mat_0_2.geometry}
         material={materials.computer_mat}
-      >
-        <meshMatcapMaterial map={monitortxt} />
-      </mesh>
+      />
       <mesh
         geometry={nodes.table_table_mat_0_3.geometry}
         material={materials.server_mat}
@@ -57,9 +50,7 @@ const HackerRoom = (props) => {
       <mesh
         geometry={nodes.table_table_mat_0_8.geometry}
         material={materials.tv_mat}
-      >
-        <meshMatcapMaterial map={monitortxt} />
-      </mesh>
+      />
       <mesh
         geometry={nodes.table_table_mat_0_9.geometry}
         material={materials.cables_mat}
