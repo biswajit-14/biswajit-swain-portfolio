@@ -286,3 +286,15 @@ export const workExperiences = [
         animation: 'salute',
     },
 ];
+
+export const techStackImages = [
+    { src: "/assets/bootstrap.png", alt: "bootstrap", title: "Bootstrap" },
+    { src: "/assets/react.png", alt: "react", title: "React" },
+    { src: "/assets/type-script.png", alt: "typescript", title: "TypeScript" },
+    { src: "/assets/next-js.svg", alt: "nextjs", title: "Next.js" },
+    { src: "/assets/tailwind.png", alt: "tailwind", title: "Tailwind CSS" },
+    { src: "/assets/three-js.svg", alt: "threejs", title: "Three.js" },
+    { src: "/assets/redux.png", alt: "redux", title: "Redux" },
+    { src: "/assets/sass.png", alt: "sass", title: "Sass" },
+    { src: "/assets/webpack.png", alt: "webpack", title: "Webpack" },
+];
